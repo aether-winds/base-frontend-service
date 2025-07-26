@@ -1,0 +1,34 @@
+{
+  "name": "@aether-winds/base-frontend-service",
+  "version": "0.0.1",
+  "description": "Base service necessities written for express services that serve html.",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc -p",
+    "dev": "nodemon --watch src --exec ts-node src/index.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aether-winds/base-frontend-service.git"
+  },
+  "author": "Patrick Ortiz <pogithub@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/aether-winds/base-frontend-service/issues"
+  },
+  "homepage": "https://github.com/aether-winds/base-frontend-service#readme",
+  "dependencies": {
+    "express": "^5.1.0",
+    "hbs": "^4.2.0"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.3",
+    "@types/hbs": "^4.0.5",
+    "nodemon": "^3.1.10",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3"
+  },
+  "engines": {
+    "node": ">=22.14.0 <23.0.0"
+  }
+}
