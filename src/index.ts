@@ -1,15 +1,12 @@
-import { join } from 'node:path';
-import express, { Application } from 'express';
-import { buildCspMiddleware, generateNonceMiddleware } from './middleware';
+import express from 'express';
+import { ContentSecurityPolicyMiddleware } from './middleware';
+import { test1 } from './routes/test1';
+import { test2 } from './routes/test2';
 
 const app = express();
+// app.use(ContentSecurityPolicyMiddleware);
 
-// Template engine
-app.set('view engine', 'hbs');
+app.use('/test1', test1);
+app.use('/test2', test2);
 
-// Middleware
-app.use(generateNonceMiddleware());
-app.use(buildCspMiddleware());
-app.disable('x-powered-by');
-
-export default app as Application;
+app.listen(3000);

@@ -1,2 +1,1 @@
-export * from './content-security-policy';
-export * from './generate-nonce';
+export * from './content-security-policy/content-security-policy';
